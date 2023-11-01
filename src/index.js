@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { MenuProvider } from "./isOpenMenu";
+import { SearchProvider } from './context/searchContext';
 
 
 
@@ -10,7 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <MenuProvider>
-      <App />
+      <SearchProvider>
+        <App />
+      </SearchProvider>
     </MenuProvider>
   </React.StrictMode>
 );

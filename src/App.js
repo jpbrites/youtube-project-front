@@ -9,6 +9,7 @@ import Login from "./pages/login";
 import { useState} from 'react'
 import Signup from "./pages/sign-up";
 import NewVideo from "./pages/new-video";
+import SearchPage from "./pages/searche";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login/>}/>
             <Route path="/sign-up" element={<Signup/>}/>
+            <Route path="/search" element={<SearchPage />} />
             <Route
               path="/*"
               element={
@@ -37,6 +39,7 @@ function App() {
                         <Route path="/library" element={<Library />} />
                         <Route path="/history" element={<History />} />
                         <Route path="/new-video" element={<NewVideo />} />
+                       
                       </Routes>
                     </div>
                   </div>
